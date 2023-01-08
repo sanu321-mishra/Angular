@@ -1,0 +1,18 @@
+<div>
+    <button  mat-raised-button color="warn" routerLink="acces">access</button>&nbsp;&nbsp;
+    <button  mat-raised-button color="warn" routerLink="proje">project</button>&nbsp;&nbsp;
+</div>
+
+<ul>
+    <li ngFor="let items of item">
+        {{item}}
+
+    </li>
+</ul>
+
+<app-access [parentdata]="prodname"></app-access>
+
+<app-access (addNewItem)="addItem($any($event))"></app-access>
+
+
+<router-outlet></router-outlet>

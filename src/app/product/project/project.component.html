@@ -1,0 +1,18 @@
+<h2>Select the Items</h2>
+
+<!-- <div *ngFor="let option of options"> -->
+    <!-- <input type="checkbox" #check
+    [checked]="items.indexOf(option)>=0
+    (change)="OnChange(option,check.checked)"
+    > -->
+    <div *ngFor="let option of options">
+    <input type="checkbox" #check
+    [checked]="items.indexOf(option)>=0"
+    (change)="OnChange(option,check.checked)"
+    >
+    {{option}}
+    </div>
+    {{items|json}}
+
+
+
